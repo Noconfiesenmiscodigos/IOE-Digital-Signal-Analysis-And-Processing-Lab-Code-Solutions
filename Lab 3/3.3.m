@@ -1,0 +1,21 @@
+clc;
+close all;
+clear all;
+b= [1,4];
+a = [1,-5];
+w=-2*pi:pi/256:2*pi;
+[h] = freqz(b,a,w);
+subplot(2,1,1);
+plot(w,abs(h));
+xlabel('Frequency \omega');
+ylabel('Magnitude');
+title('Magnitude');
+title('Magnitude Response of Difference Equation');
+grid on;
+
+subplot(2,1,2);
+plot(w,angle(h));
+xlabel('Frequency \Omega');
+ylabel('Phase - Radians');
+title('Phase Responseof Differenceequation');
+grid on;
